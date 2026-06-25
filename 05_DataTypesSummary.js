@@ -59,3 +59,50 @@ const myFunction = function(){
 // console.log(typeof [1, 2, 3]);       // array returns as "object"
 // console.log(typeof {name: "Rajdeep"});   // "object"
 // console.log(typeof myFunction);      // "function"
+
+
+
+
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+
+// stack memory (Primitive) (copy)
+// heap memory (Non-primitive) (reference or original)
+
+
+
+let myYoutubeName = "FreezeGaming" //original 
+let anotherName = myYoutubeName //copy is passed
+anotherName = "Freezaline" //Changing one variable does not affect the other.
+
+console.log(myYoutubeName);
+console.log(anotherName);
+
+// The variable itself stores only a reference (address) to the object in the heap
+let userOne = {
+    email : "rajdeepdas2431@gmail.com",
+    upi : "48434734@ybl"
+}
+
+let userTwo = userOne //did not create a new object. It only copied the reference (address)
+// Both variables point to the same object.
+
+
+userTwo.email = "user@gmail.com"
+
+console.log(userOne.email);
+console.log(userTwo.email);
+
+
+
+// Primitive → Stack → Copy by Value
+// Non-Primitive → Heap → Copy by Reference
+
+// | Copy by Value                     | Copy by Reference                      |
+// | --------------------------------- | -------------------------------------- |
+// | Used by **primitive** types       | Used by **objects, arrays, functions** |
+// | Copies the actual value           | Copies the memory reference (address)  |
+// | Variables are independent         | Variables point to the same data       |
+// | Changes don't affect the original | Changes affect both variables          |
